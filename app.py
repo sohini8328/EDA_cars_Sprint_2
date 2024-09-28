@@ -25,7 +25,7 @@ df_filtered = df[(df.model == selected_model) & df.model_year.isin(list(actual_r
 df_filtered
 
 st.header('Price analysis')
-st.write("" See the how the prices changes based on car transmission, type, odometer and condition)
+st.write("" See the how the prices changes based on car transmission, type, odometer and condition"")
 
 list_hist =['condition', 'type', 'transmission', 'odometer']
 selected_type = st.selectbox('Split for price distribution', list_hist)
