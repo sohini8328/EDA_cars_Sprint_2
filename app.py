@@ -6,7 +6,7 @@ import plotly.express as px
 
 
 st.header('Market data for used cars')
-st.write('Filter cars with under 80,000 miles on it')
+st.write('Filter cars with under 200,000 miles on it')
 
 df = pd.read_csv('vehicles_us.csv')
 
