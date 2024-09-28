@@ -43,3 +43,14 @@ choice_for_scatter = st.selectbox('Price dependency on', list_for_scatter)
 fig2 = px.scatter(df, x='price', y=choice_for_scatter, color= 'days_listed', hover_data= ['model_year'])
 
 st.plotly_chart(fig2)
+
+
+st.header('Car models conditions')
+st.write('See the how the conditions of cars based on models')
+
+list_for_hist = ['model', 'condition']
+selected_condition = st.selectbox('Split for model conditions',list_for_hist)
+
+fig3 = px.histogram(df, x='model', color = selected_type)
+fig3.update_layout(title='<b> Split for condition of model by {}<b>'.format(selected_type))
+st.plotly_chart(fig3)
