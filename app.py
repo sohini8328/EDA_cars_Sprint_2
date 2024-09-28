@@ -10,15 +10,12 @@ st.write('Filter cars with under 80,000 miles on it')
 
 df = pd.read_csv('vehicles_us.csv')
 
-df['model_year'] = df['model_year'].fillna(0)
-df['cylinders'] = df['cylinders'].fillna(0)
-df['paint_color']=df['paint_color'].fillna('unknown')
-df['is_4wd'] = df['is_4wd'].fillna(0)
-
-
 car_model = df['model'].unique()
 
 selected_model = st.selectbox('Select a car model', car_model)
+
+df_filtered = df[df.model == selected_model]
+df_filtered
 
 min_year, max_year = int(df['model_year'].min()), int(df['model_year'].max())
 
