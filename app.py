@@ -38,7 +38,7 @@ st.plotly_chart(fig1)
 
 list_for_scatter=['odometer', 'paint_color', 'days_listed']
 
-Choice_for_scatter = st.selectbox('Price dependency on', list_for_scatter)
+choice_for_scatter = st.selectbox('Price dependency on', list_for_scatter)
 
 fig2 = px.scatter(df, x='price', y=choice_for_scatter, color= 'days_listed', hover_data= ['model_year'])
 
