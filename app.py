@@ -21,7 +21,7 @@ year_range = st.slider("Choose years", value=(min_year, max_year), min_value= mi
                                                 
 actual_range = list(range(year_range[0], year_range[1]+1))
 
-df_filtered = df[df.model == selected_model]
+df_filtered = df[(df.model == selected_model) & df.model_year.isin(list(actual_range))]
 df_filtered
 
 
