@@ -24,8 +24,11 @@ actual_range = list(range(year_range[0], year_range[1]+1))
 df_filtered = df[(df.model == selected_model) & df.model_year.isin(list(actual_range))]
 df_filtered
 
+st.header('Price analysis')
+st.write("" See the how the prices changes based on car transmission, type, odometer and condition)
 
-
+list_hist =['condition', 'type', 'transmission', 'odometer']
+selected_type = st.selectbox('Split for price distribution', list_hist)
 
 
 
