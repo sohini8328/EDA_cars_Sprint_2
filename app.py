@@ -46,14 +46,14 @@ fig2 = px.scatter(df, x='price', y=choice_for_scatter, color= 'days_listed', hov
 st.plotly_chart(fig2)
 
 
-st.header('Car models conditions')
-st.write('See the how the conditions of cars based on models')
+st.header('Condition vs model year')
+st.write('See the conditions of cars based on models year')
 
-list_for_hist = ['model', 'condition']
-selected_condition = st.selectbox('Split for model conditions',list_for_hist)
+list_for_hist = ['condition', 'model','model_year']
+selected_condition = st.selectbox('Split for conditions based on model year',list_for_hist)
 
-fig3 = px.histogram(df, x='model', color = selected_type)
-fig3.update_layout(title='<b> Split for condition of model by {}<b>'.format(selected_type))
+fig3 = px.histogram(df, x='model', color = selected_condition)
+fig3.update_layout(title='<b> Split for condition of model by {}<b>'.format(selected_condition))
 st.plotly_chart(fig3)
 
 
