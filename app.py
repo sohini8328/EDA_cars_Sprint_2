@@ -65,4 +65,4 @@ if agree:
 click = st.button("click me if ready to buy")
 
 if click:
-     st.write("Please provide contact information")
+     st.write("Please call or text at 281 326 8455")
