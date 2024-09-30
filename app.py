@@ -49,7 +49,7 @@ st.plotly_chart(fig2)
 st.header('Condition vs model year')
 st.write('See the conditions of cars based on models year')
 
-list_for_hist = ['condition', 'model','model_year']
+list_for_hist = ['condition','model_year']
 selected_condition = st.selectbox('Split for conditions based on model year',list_for_hist)
 
 fig3 = px.histogram(df, x='model', color = selected_condition)
