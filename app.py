@@ -28,9 +28,9 @@ df_filtered
 
 
 st.header('Price analysis')
-st.write('See the how the prices changes based on car transmission, type, odometer and condition')
+st.write('See the how the prices changes based on car transmission, type, and condition')
 
-list_for_hist = ['condition', 'type', 'transmission', 'odometer']
+list_for_hist = ['condition', 'type', 'transmission']
 selected_type = st.selectbox('Split for price distribution',list_for_hist)
 
 fig1 = px.histogram(df, x='price', color = selected_type)
