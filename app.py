@@ -60,9 +60,9 @@ st.plotly_chart(fig3)
 agree = st.checkbox("I agree to all the terms and conditions of the website")
 
 if agree:
-      st.write("Great!")
+   st.write("Great!")
 
- click = st.button("click me if ready to buy")
+click = st.button("click me if ready to buy")
 
 if click:
-      st.write("Please provide contact information")
+     st.write("Please provide contact information")
