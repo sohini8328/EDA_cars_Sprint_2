@@ -10,6 +10,7 @@ st.write('Filter cars with under 200,000 miles on it')
 
 df = pd.read_csv('vehicles_us.csv')
 
+
 car_model = df['model'].unique()
 
 selected_model = st.selectbox('Select a car model', car_model)
@@ -54,3 +55,11 @@ selected_condition = st.selectbox('Split for model conditions',list_for_hist)
 fig3 = px.histogram(df, x='model', color = selected_type)
 fig3.update_layout(title='<b> Split for condition of model by {}<b>'.format(selected_type))
 st.plotly_chart(fig3)
+
+
+agree = st.checkbox("I agree to all the terms and conditions of the website")
+
+if agree:
+      st.write("Great!")
+
+ 
