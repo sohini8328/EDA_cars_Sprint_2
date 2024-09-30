@@ -62,4 +62,7 @@ agree = st.checkbox("I agree to all the terms and conditions of the website")
 if agree:
       st.write("Great!")
 
- 
+ click = st.button('click me if ready to buy')
+
+if click:
+      st.write("Please provide contact information")
