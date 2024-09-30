@@ -8,26 +8,28 @@ This is exploratory data analysis for different models of cars from car sales ad
 
 Use BLANK_README.md to get started
 
-Build With
+Build With:
 This is the list of the libraries used by me to run this project were pandas, scipy, streamlit, altair ,plotly.
 
-Getting Started 
+Getting Started:
 
 This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple steps.
 
-Prequisites
+Prequisites:
 This is an example of software and how to install them.
  VS Code 
 
-Installation
-1.
-2. Clone the repo 
+Installation:
+
+1. Clone the repo 
 https://github.com/sohini8328/EDA_cars.git
 
-3. Install streamlit packages
+2. Install streamlit packages
 pip install streamlit
 
-4. Add config.toml file
+3. Add config.toml file
+add content of config.toml to .streamlit/config.toml
+
 
 Please see my website link attached below.
 https://eda-cars.onrender.com
