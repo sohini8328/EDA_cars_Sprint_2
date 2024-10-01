@@ -44,7 +44,7 @@ st.write('See the how the prices changes based on car transmission, type, and co
 list_for_hist = ['condition', 'type', 'transmission']
 selected_type = st.selectbox('Split for price distribution',list_for_hist)
 
-fig1 = px.histogram(df, x='price', color = selected_type)
+fig1 = px.histogram(df, x='price', color = selected_type, range_x= [1, 200000])
 fig1.update_layout(title='<b> Split for price distribution by {}<b>'.format(selected_type))
 st.plotly_chart(fig1)
 
