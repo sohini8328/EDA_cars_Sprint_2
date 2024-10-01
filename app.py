@@ -15,6 +15,17 @@ car_model = df['model'].unique()
 
 selected_model = st.selectbox('Select a car model', car_model)
 
+med_model_year = df.groupby('model')['model_year'].transform('median')
+med_cylinders = df.groupby('model')['cylinders'].transform('median')
+med_odometer = df.groupby('model')['odometer'].transform('median')
+med_is_4wd = df.groupby('model')['is_4wd'].transform('median')
+
+df['model_year'] = df['model_year'].fillna(med_model_year)
+df['cylinders'] = df['cylinders'].fillna(med_cylinders)
+df['odometer']=df['odometer'].fillna(med_odometer)
+df['is_4wd'] = df['is_4wd'].fillna(med_is_4wd)
+df.head(10)
+
 
 min_year, max_year = int(df['model_year'].min()), int(df['model_year'].max())
 
@@ -37,11 +48,12 @@ fig1 = px.histogram(df, x='price', color = selected_type)
 fig1.update_layout(title='<b> Split for price distribution by {}<b>'.format(selected_type))
 st.plotly_chart(fig1)
 
+
 list_for_scatter=['odometer', 'paint_color', 'days_listed']
 
 choice_for_scatter = st.selectbox('Price dependency on', list_for_scatter)
 
-fig2 = px.scatter(df, x='price', y=choice_for_scatter, color= 'days_listed', hover_data= ['model_year'])
+fig2 = px.scatter(df, x='price', y=choice_for_scatter, color= 'days_listed', range_x= [1, 200000])
 
 st.plotly_chart(fig2)
 
